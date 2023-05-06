@@ -26,7 +26,7 @@
 import apipool from "@/api/apipool";
 import { list_to_obj } from "@/util/util";
 export default {
-  name: "avue-select-plus",
+  name: "el-select-plus",
   components: {},
   props: {
     url: {
@@ -92,6 +92,7 @@ export default {
               return !listMin.includes(item);
             });
           this.dic = [...filterList, ...listMin];
+          // todo 此处没去重
         } else {
           this.dic = listMin;
         }
